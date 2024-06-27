@@ -214,44 +214,6 @@ textarea:focus + .label .text {
   color: #3974F1;
 }
 
-/* Cursor */
-
-html {
-    cursor: none;
-}
-
-a[href],
-button,
-textarea,
-input,
-label {
-  cursor: none; /* Hide the default pointer cursor */
-}
-
-.custom-cursor,
-.custom-cursor-dot {
-  position: fixed;
-  z-index: 999;
-  top: 0;
-  left: 0;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-}
-
-.custom-cursor {
-  width: 30px;
-  height: 30px;
-  border: 1px solid #76A2FF;
-  border-radius: 50%;
-}
-
-.custom-cursor-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50px;
-  background-color: #3974F1;
-}
-
 /* Scrollbar */
 
 ::-webkit-scrollbar {

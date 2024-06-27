@@ -3,7 +3,7 @@
 // four variables to connect to the database
 $host = "localhost";
 $username = "root";
-$user_pass = "";
+$user_pass = "P@$\$w0rd27";
 $database_in_use = "droppua";
 
 // create a database connection instance

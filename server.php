@@ -16,6 +16,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $result = $mysqli->query($sql) or die(mysqli_error($mysqli));
         echo $fileName;
     }
+    elseif($_POST['type'] == 'iosupload') {
+        $fileName = $_POST['name'];
+        $filePath = $uploadDir . $fileName;
+        $sqlPath = './' . $filePath;
+        $sql = "INSERT INTO content (type, value) VALUES ('fle', '$sqlPath')";
+        $result = $mysqli->query($sql) or die(mysqli_error($mysqli));
+    }
     elseif($_POST['type'] == 'revert') {
         $id = $_POST['id'];
         $filePath = $uploadDir . $id;
