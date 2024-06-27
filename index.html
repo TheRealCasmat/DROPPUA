@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang=en>
+    <head>
+        <meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+        <link rel=icon type=image/png href=images/favicon.ico>
+        <title>DROPPUA: Text & File Sharing</title>
+        <meta name=viewport content="width=device-width,initial-scale=1,user-scalable=no">
+        <meta name=apple-mobile-web-app-capable content=no>
+        <meta name=apple-mobile-web-app-title content=DROPPUA>
+        <meta name=description content="Simple Text & File Sharing, Done in Real-Time.">
+        <link href=https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.css rel=stylesheet>
+        <link href=https://unpkg.com/filepond-plugin-pdf-preview/dist/filepond-plugin-pdf-preview.min.css rel=stylesheet>
+        <link href=https://unpkg.com/filepond-plugin-media-preview@1.0.11/dist/filepond-plugin-media-preview.min.css rel=stylesheet>
+        <link href=https://unpkg.com/filepond-plugin-get-file@1.1.0/dist/filepond-plugin-get-file.min.css rel=stylesheet>
+        <link href=https://unpkg.com/filepond@^4/dist/filepond.css rel=stylesheet>
+        <link rel=stylesheet href=particles.min.css>
+        <link rel=stylesheet href=styles.min.css>
+    </head>
+    <div class=page-bg>
+        <div class=animation-wrapper>
+            <div class="particle particle-1"></div>
+            <div class="particle particle-2"></div>
+            <div class="particle particle-3"></div>
+            <div class="particle particle-4"></div>
+        </div>
+    </div>
+    <body>
+        <div class=container>
+            <div class=row>
+                <header>
+                    <img src=images/logo.png alt=logo class=logo>
+                    <p class=noselect>Real-Time Text & File Sharing</p>
+                </header>
+            </div>
+            <div class="row input-container">
+                <textarea type=text id=text name=text value="" aria-labelledby=label-text oninput=sendText()></textarea>
+                <label class=label for=text id=label-text>
+                    <div class="text noselect">SHARE TEXT</div>
+                </label>
+            </div>
+            <div class="row fp input-container">
+                <input type=file class=filepond id=filepond name=filepond multiple data-max-file-size=100GB credits=false data-pdf-preview-height=100 allow-download-by-url=true/ >
+                <label class=label for=filepond id=label-text>
+                    <div class="text noselect">SHARE FILES</div>
+                </label>
+            </div>
+        </div>
+    </body>
+    <script src=base64.min.js></script>
+    <script src=https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.js></script>
+    <script src=https://unpkg.com/filepond-plugin-pdf-preview/dist/filepond-plugin-pdf-preview.min.js></script>
+    <script src=https://unpkg.com/filepond-plugin-media-preview@1.0.11/dist/filepond-plugin-media-preview.min.js></script>
+    <script src=https://unpkg.com/filepond-plugin-image-exif-orientation/dist/filepond-plugin-image-exif-orientation.min.js></script>
+    <script src=https://unpkg.com/filepond-plugin-get-file@1.1.0/dist/filepond-plugin-get-file.min.js></script>
+    <script src=https://unpkg.com/filepond@^4/dist/filepond.min.js></script>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js></script>
+    <script src=https://code.jquery.com/jquery-3.7.1.min.js></script>
+    <script src=script.min.js></script>
+    <script src=cursor.min.js></script>
+</html>
