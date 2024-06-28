@@ -44,7 +44,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $result = $mysqli->query($sql) or die(mysqli_error($mysqli));
     }
 }
-else {
-    header("Location: index.html");
-}
 ?>

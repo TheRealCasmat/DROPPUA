@@ -73,11 +73,11 @@ img {
 /* Typography */
 
 @font-face { 
-    font-family: Agrandir; src: url('Agrandir.otf');
+    font-family: Agrandir; src: url('css/Agrandir.otf');
 }
 
 @font-face { 
-    font-family: DMSans; src: url('DMSans.ttf'); 
+    font-family: DMSans; src: url('css/DMSans.ttf'); 
 } 
 
 body {

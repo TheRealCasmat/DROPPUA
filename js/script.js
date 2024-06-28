@@ -40,7 +40,7 @@
                 formData.append("name", file.name);
 
                 const request = new XMLHttpRequest();
-                request.open('POST', 'server.php');
+                request.open('POST', 'php/server.php');
 
                 // Should call the progress method to update the progress to 100% before calling load
                 // Setting computable to false switches the loading indicator to infinite mode
@@ -79,7 +79,7 @@
                 formData.append("type", "revert");
                 formData.append("id", uniqueFileId);
                 const request = new XMLHttpRequest();
-                request.open('POST', 'server.php');
+                request.open('POST', 'php/server.php');
 
                 request.onload = function () {
                     if (request.status >= 200 && request.status < 300) {
@@ -98,7 +98,7 @@
                 formData.append("type", "remove");
                 formData.append("path", source);
                 const request = new XMLHttpRequest();
-                request.open('POST', 'server.php');
+                request.open('POST', 'php/server.php');
 
                 request.onload = function () {
                     if (request.status >= 200 && request.status < 300) {
@@ -132,7 +132,7 @@
         formData.append("type", "updatetext");
         formData.append("text", Base64.encode(document.getElementById('text').value));
         const request = new XMLHttpRequest();
-        request.open('POST', 'server.php');
+        request.open('POST', 'php/server.php');
         request.send(formData);
     };
 
@@ -156,7 +156,7 @@
         });
     };
 
-    var source = new EventSource("stream.php");
+    var source = new EventSource("php/stream.php");
     source.onmessage = function(event) {
         const json = JSON.parse(Base64.decode(event.data));
         document.getElementById('text').value = Base64.decode(json['text']);
