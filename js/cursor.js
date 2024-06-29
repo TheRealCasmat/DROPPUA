@@ -193,7 +193,7 @@ const ccOptions = {
     if (data.isInViewport) {
       if (data.isMoving) {
         if (data.isHover) {
-          gsap.to(data.cursor, { opacity: 0.5, scale: 2 });
+          gsap.to(data.cursor, { opacity: 0.5, scale: data.isClicked ? 1.7 : 2 });
           currentScale = 2;
         } else {
           gsap.to(data.cursor, { opacity: 1, scale: data.isClicked ? 1.2 : 1.5 });
