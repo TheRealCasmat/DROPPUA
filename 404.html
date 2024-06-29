@@ -8,11 +8,6 @@
         <meta name=apple-mobile-web-app-capable content=no>
         <meta name=apple-mobile-web-app-title content=DROPPUA>
         <meta name=description content="Simple Text & File Sharing, Done in Real-Time.">
-        <link href=https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.css rel=stylesheet>
-        <link href=https://unpkg.com/filepond-plugin-pdf-preview/dist/filepond-plugin-pdf-preview.min.css rel=stylesheet>
-        <link href=https://unpkg.com/filepond-plugin-media-preview@1.0.11/dist/filepond-plugin-media-preview.min.css rel=stylesheet>
-        <link href=https://unpkg.com/filepond-plugin-get-file@1.1.0/dist/filepond-plugin-get-file.min.css rel=stylesheet>
-        <link href=https://unpkg.com/filepond@^4/dist/filepond.min.css rel=stylesheet>
         <link rel=stylesheet href=https://cdn.jsdelivr.net/gh/TheRealCasmat/droppua/css/particles.min.css>
         <link rel=stylesheet href=https://cdn.jsdelivr.net/gh/TheRealCasmat/droppua/css/styles.min.css>
     </head>
@@ -32,17 +27,10 @@
                     <p class=noselect>Real-Time Text & File Sharing</p>
                 </header>
             </div>
-            <div class="row input-container">
-                <textarea type=text id=text name=text value="" aria-labelledby=label-text oninput=sendText()></textarea>
-                <label class=label for=text id=label-text>
-                    <div class="text noselect">SHARE TEXT</div>
-                </label>
-            </div>
-            <div class="row fp input-container">
-                <input type=file class=filepond id=filepond name=filepond multiple data-max-file-size=100GB credits=false data-pdf-preview-height=100 allow-download-by-url=true/ >
-                <label class=label for=filepond id=label-text>
-                    <div class="text noselect">SHARE FILES</div>
-                </label>
+            <div class="row centered" draggable=false>
+                <h1 class=noselect style="font-size: 16vw; padding-bottom: 10vh;">404</h1>
+                <h3 class=noselect style="font-size: 2vw">Uh-Oh, Looks Like You Reached a Dead End!</h3>
+                <p class=noselect style="font-size: 1.25vw">You can try going back to the <a href=https://dro.pp.ua><u><b>Home Page</b></u></a>.</p>
             </div>
         </div>
     </body>
@@ -56,5 +44,5 @@
     <script src=https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js></script>
     <script src=https://code.jquery.com/jquery-3.7.1.min.js></script>
     <script src=https://cdn.jsdelivr.net/gh/TheRealCasmat/droppua/js/script.min.js></script>
-    <script src=https://cdn.jsdelivr.net/gh/TheRealCasmat/droppua/js/cursor.min.js></script>
+    <script src=https://cdn.jsdelivr.net/gh/TheRealCasmat/droppua/js/cursor.js></script>
 </html>
