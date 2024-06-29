@@ -38,8 +38,7 @@ function customCursor(options) {
   let timer = null,
     idleTimer = null,
     hideTimer = null,
-    idleAnim = null,
-    currentScale = 1.5;
+    idleAnim = null;
 
   const cursor = document.createElement("div");
   cursor.className = settings.targetClass;
@@ -102,7 +101,6 @@ function customCursor(options) {
         clearTimeout(timer);
         clearTimeout(idleTimer);
         clearTimeout(hideTimer);
-        gsap.to(cursor, { scale: currentScale - 0.3 });
       }
     });
 
@@ -112,7 +110,6 @@ function customCursor(options) {
         clearTimeout(timer);
         clearTimeout(idleTimer);
         clearTimeout(hideTimer);
-        gsap.to(cursor, { scale: currentScale });
       }
     });
 
@@ -191,17 +188,17 @@ const ccOptions = {
   idleTime: 2000,
   onMove: function (data) {
     if (data.isInViewport) {
-      if (data.isMoving) {
         if (data.isHover) {
           gsap.to(data.cursor, { opacity: 0.5, scale: data.isClicked ? 1.7 : 2 });
-          currentScale = 2;
         } else {
-          gsap.to(data.cursor, { opacity: 1, scale: data.isClicked ? 1.2 : 1.5 });
-          currentScale = 1.5;
+          if (data.isMoving) {
+            gsap.to(data.cursor, { opacity: 0.5 });
+          }
+          else {
+            gsap.to(data.cursor, { opacity: 1 });
+          }
+          gsap.to(data.cursor, { scale: data.isClicked ? 1.2 : 1.5 });
         }
-      } else {
-        gsap.to(data.cursor, { opacity: 0.5 });
-      }
     } else {
       gsap.to(data.cursor, { opacity: 0, scale: 2 });
     }
