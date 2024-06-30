@@ -8,5 +8,5 @@
 <h1>Integrations</h1>
 <p>Ease of use was a top priority in mind when creating <b>DROPPUA</b>. Along with the easy to use interface all on one page, there are integrations that have been made to work with the app.</p>
 <ul>
-  <li><h3><a href=https://www.icloud.com/shortcuts/fd5c5912bd924b4e9b1bd55e7c188aae>DROPPUA | iOS Shortcut</a></h3><img align=center src=https://i.imgur.com/T8LBrM3.png></li>
+  <li><h3><a href=>DROPPUA | iOS Shortcut</a></h3><img align=center src=https://i.imgur.com/T8LBrM3.png></li>
 </ul>
